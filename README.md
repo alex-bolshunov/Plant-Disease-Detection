@@ -1,12 +1,12 @@
 # Detecting Plant Diseases Using Machine Learning
 
 ## Project Overview
-This project focuses on the early detection of plant diseases using machine learning techniques. Timely disease detection can significantly minimize crop damage and prevent potential harvest losses. By analyzing images of bell pepper leaves, both healthy and diseased, we trained and evaluated multiple machine learning models to assess their suitability for real-time agricultural applications.
+This project leverages traditional machine learning algorithms to classify healthy and diseased potato leaves using image data from the PlantVillage dataset. The goal was to compare the performance of various models and identify those best suited for real-time agricultural applications.
 
 ## Dataset
 - **Source**: [PlantVillage Dataset]([https://plantvillage.psu.edu/](https://www.kaggle.com/datasets/emmarex/plantdisease))
-- **Subset**: Bell pepper leaves (healthy and affected by bacterial spot)
-- **Samples**: 2474 images (1477 healthy, 997 diseased)
+- **Subset**: Potato leaf images with three classes (healthy, early blight, late blight)
+- **Samples**: 2152 (augmented and oversampled)
 
 ## Technologies Used
 - Python
@@ -34,13 +34,14 @@ This project focuses on the early detection of plant diseases using machine lear
 - Average Inference Time
 
 ## Results Summary
-| Model          | Accuracy | Precision | Recall | F1 Score |
-|----------------|----------|-----------|--------|----------|
-| SVM            | 0.990    | 0.990     | 0.995  | 0.992    |
-| Decision Tree  | 0.913    | 0.918     | 0.942  | 0.930    |
-| Naive Bayes    | 0.936    | 0.964     | 0.930  | 0.946    |
-| K-Nearest Neighbor | 0.976 | 0.972    | 0.989  | 0.980    |
-| Perceptron     | 0.995    | 0.995     | 0.997  | 0.996    |
+| Model         | Accuracy | Precision | Recall | F1-Score |
+| ------------- | -------- | --------- | ------ | -------- |
+| **SVM (RBF)** | 0.977    | 0.989     | 0.980  | 0.985    |
+| Perceptron    | 0.943    | 0.971     | 0.968  | 0.970    |
+| KNN (k=7)     | 0.886    | 0.935     | 0.886  | 0.896    |
+| Naive Bayes   | 0.842    | 0.881     | 0.950  | 0.913    |
+| Decision Tree | 0.770    | 0.866     | 0.853  | 0.859    |
+
 
 
 
